@@ -31,7 +31,7 @@ void setup()
   pos2 = 90;
   pos3 = 90;
   pos4 = 90;
-  pos5 = 0;
+  pos5 = 0;  //Gripper set zero
 
 //  HomePos();
   idektep.setPWM(servo1, 0, angleToPulse(pos1) );
