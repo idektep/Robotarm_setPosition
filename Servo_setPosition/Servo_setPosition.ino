@@ -1,8 +1,9 @@
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
 Adafruit_PWMServoDriver idektep = Adafruit_PWMServoDriver(0x40);
-#define SERVOMIN  100
-#define SERVOMAX  600
+
+#define SERVOMIN  155
+#define SERVOMAX  650
 
 #define servo1 0
 #define servo2 1
@@ -18,7 +19,7 @@ int pos5 = 0;
 
 int angleToPulse(int ang) {
   int pulse = map(ang, 0, 180, SERVOMIN, SERVOMAX);
-  return pulse;
+  return pulse; 
 }
 
 void setup()
@@ -30,8 +31,8 @@ void setup()
   pos1 = 90;
   pos2 = 90;
   pos3 = 90;
-  pos4 = 90;
-  pos5 = 0;  //Gripper set zero
+  pos4 = 30;
+  pos5 = 10;  //Gripper set
 
 //  HomePos();
   idektep.setPWM(servo1, 0, angleToPulse(pos1) );
