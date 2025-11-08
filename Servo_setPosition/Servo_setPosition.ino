@@ -2,8 +2,8 @@
 #include <Adafruit_PWMServoDriver.h>
 Adafruit_PWMServoDriver idektep = Adafruit_PWMServoDriver(0x40);
 
-#define SERVOMIN  155
-#define SERVOMAX  650
+#define SERVOMIN  100
+#define SERVOMAX  600
 
 #define servo1 0
 #define servo2 1
